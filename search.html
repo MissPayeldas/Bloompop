@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,6 +170,9 @@
         }
     ];
 
+    // Initialize cart as an empty array or retrieve from local storage
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
     function performSearch() {
         const query = document.getElementById('searchInput').value.toLowerCase();
         const resultsContainer = document.getElementById('resultsContainer');
@@ -183,12 +190,11 @@
                 productBox.innerHTML = `
                     <a href="#" class="product-box-img">
                         <img src="${product.image}" alt="${product.name}"/>
-                        <span>(New)</span>
                     </a>
                     <div class="product-box-text">
                         <a href="#" class="product-text-title">${product.name}</a>
                         <span>₹${product.price} <del>₹${(product.price + 200).toFixed(2)}</del></span>
-                        <a href="#" class="product-cart-btn" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+                        <a href="#" class="product-cart-btn" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}" onclick="addToCart(event)">
                             Add To Cart
                         </a>
                     </div>
@@ -198,6 +204,71 @@
         } else {
             resultsContainer.innerHTML = '<p>No results found.</p>';
         }
+    }
+
+    // Function to add product to the cart
+    function addToCart(event) {
+        event.preventDefault();
+        const productName = event.target.getAttribute('data-name');
+        const productPrice = parseFloat(event.target.getAttribute('data-price'));
+        const productImage = event.target.getAttribute('data-image');
+
+        // Check if the product already exists in the cart
+        const existingProductIndex = cart.findIndex(item => item.name === productName);
+        if (existingProductIndex > -1) {
+            // If it exists, increase the quantity
+            cart[existingProductIndex].quantity += 1;
+        } else {
+            // If it doesn't exist, add it to the cart
+            cart.push({
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: 1
+            });
+        }
+
+        // Save cart to local storage
+        localStorage.setItem("cart", JSON.stringify(cart));
+        console.log(cart); // Check the cart content
+        alert(`${productName} has been added to your cart!`); // Optional: Alert user
+    }
+
+
+
+    function addToCart(event) {
+        event.preventDefault();
+        const productName = event.target.getAttribute('data-name');
+        const productPrice = parseFloat(event.target.getAttribute('data-price'));
+        const productImage = event.target.getAttribute('data-image');
+    
+        // Check if the product already exists in the cart
+        const existingProductIndex = cart.findIndex(item => item.name === productName);
+        if (existingProductIndex > -1) {
+            // If it exists, increase the quantity
+            cart[existingProductIndex].quantity += 1;
+        } else {
+            // If it doesn't exist, add it to the cart
+            cart.push({
+                name: productName,
+                price: productPrice,
+                image: productImage,
+                quantity: 1
+            });
+        }
+    
+        // Save cart to local storage
+        localStorage.setItem("cart", JSON.stringify(cart));
+        console.log(cart); // Check the cart content
+    
+        // Update notification area
+        const notification = document.getElementById('notification');
+        notification.innerHTML = `${productName} has been added to your cart!`;
+        
+        // Optionally, clear the notification after a few seconds
+        setTimeout(() => {
+            notification.innerHTML = '';
+        }, 3000);
     }
 </script>
 
