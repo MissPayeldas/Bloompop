@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font awesome cdn link-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Bloom Pop Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/fav-icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+
+<body>
+    <section id="main">
+
+        <!--header............-->
+        <header>
+            <!--header top-->
+            <div class="header-top">
+                <!--location-->
+                <div class="nav-location"> 
+                    <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" height="10px" width="10px"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                    Location
+                    </a>
+                </div>
+                <!--LOGOO-->
+                <a href="" class="logo">
+                    <img src="images/ailogo.png" width="250px" height="115" alt="logo">
+                </a>
+            
+                <!--nav-btns-->
+                <div class="nav-btns">
+                    <!-- nav-btns -->
+                    <!-- nav-btns -->
+        <div class="nav-btns" style="display: flex; align-items: center; gap: 20px;">
+        <!-- search -->
+    
+        <a href="search.html" class="nav-search">
+            <form action="search.html" method="GET" class="search-form">
+            <input type="text" name="query" placeholder="Search..." required> <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="20px" width="20px">
+                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+    </svg>
+    </a>
+    
+    </form>
+    <div id="searchResults"></div>
+  
+    <!-- cart -->
+    <a href="cart.html" class="nav-cart"> 
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="20px" width="20px">
+            <path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H171.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/>
+        </svg>
+        </a>
+    
+           <!-- track order -->
+            <a href="track.html" class="nav-track">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" height="20px" width="20px">
+                <path d="M624 352h-16V243.9c0-16.9-6.7-33.1-18.7-45.1L466.3 75.5C454.3 63.5 438.1 56.8 421.2 56.8H320v-8c0-13.3-10.7-24-24-24H104c-13.3 0-24 10.7-24 24v352c0 13.3 10.7 24 24 24h192c13.3 0 24-10.7 24-24v-8h101.2c16.9 0 33.1-6.7 45.1-18.7l122.9-122.9c12-12 18.7-28.2 18.7-45.1V352h16c8.8 0 16 7.2 16 16v96c0 8.8-7.2 16-16 16H464c-8.8 0-16-7.2-16-16v-16H320v16c0 26.5-21.5 48-48 48H104c-26.5 0-48-21.5-48-48V48C56 21.5 77.5 0 104 0h192c26.5 0 48 21.5 48 48v8h101.2c26.5 0 51.9 10.5 70.7 29.3l122.9 122.9c18.8 18.8 29.3 44.2 29.3 70.7V352z"/>
+            </svg>
+            </a>
+  
+        <!-- user -->
+            <a href="user.html" class="nav-user"> 
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="20px" width="20px">    
+                <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512h388.6c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304  269.7 304h-91.4z"/>
+            </svg> 
+            </a>
+        </div>
+    </div>
+</div>
+
+
+            <!--navigationnnn-->
+            <nav class="navigation">
+                <!--menuuu-->
+                <ul class="menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#category">Category</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li>
+                        <a href="#popular">Popular</a>
+                        <span class="nav-label">Best Offer</span>
+                    
+                    </li>
+                    <a href="#recent-products">Recent</a>
+                </ul>
+            </nav>
+        </header>
+
+        <!--content..................-->
+        <div class="main-content">
+            <!--text-->
+            <div class="main-content-text">
+                <strong>Bouquet Collection </strong>
+                <h1>RICH FLOWERS <br/>REAL & RIBBON ROSES COLLECTION </h1>
+                <P>We have Two combinations of flowers made up of Real flowers bouquets and Satin ribbon flower bouquets </P>
+                <a href="#">SHOP NOW</a>
+            </div>
+            <!--img-->
+            <div class="main-content-img">
+                <img src="Images/frontb.png" alt="model">
+            </div>
+        </div>
+    </section>
+
+    <!--search.....................-->
+    <div class="search-bar">
+        <!--search-input-->
+        <form class="search-input">
+            <input type="text" name="search" placeholder="Search For Product"/>
+            <!--cancel-bttn-->
+            <a href="javascript:void(0);" class="search-cancel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="30px" height="30px"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </a>
+        </form>
+    </div>
+
+    <!--==login-and-signup======================-->
+    <div class="form">
+
+        
+        <!--**login******************************-->
+        <div class="login-form">
+            <!--close-btn-->
+            <a href="javascript:void(0);" class="form-cancel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" height="20px" width="20px"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+
+            </a>
+            <!--heding-->
+            <strong>Log In</strong>
+            <!--inputs-->
+            <form>
+                <input type="email" name="email" placeholder="example@gmail.com" required/>
+                <input type="password" name="password" placeholder="password" required/>
+                <input type="submit" value="Log In"/>  
+
+            </form>
+            <!--btns-->
+            <div class="form-btns">
+                <a href="#" class="forget">Forget Youre password?</a>
+                <a href="javascript:void(0)" class="sign-up-btn">Create Account</a>
+            </div>
+        </div>
+
+        <!--**sign-up******************************-->
+        <div class="sign-up-form">
+            <!--close-btn-->
+            <a href="javascript:void(0);" class="form-cancel">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" height="20px" width="20px"><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+
+            </a>
+            <!--heding-->
+            <strong>Sign Up</strong>
+            <!--inputs-->
+            <form>
+                <input type="text" name="Fullname" placeholder="Full Name" required/>
+                <input type="email" name="email" placeholder="example@gmail.com" required/>
+                <input type="password" name="password" placeholder="password" required/>
+                <input type="submit" value="Sign UP"/>  
+
+            </form>
+            <!--btns-->
+            <div class="form-btns">
+                <a href="javascript:void(0)" class="already-account">already have an account?</a>
+            </div>
+        </div>
+
+
+    </div> 
+
+    <!--===================category=============================-->
+    <section id="category">  
+        
+        <!--box1-->
+        <a href="#" class="category-box">
+            <!--img-->
+            <div class="category-box-img">
+                <img src="images/rose.jpg" height="250" width="250" alt="Rose">
+            </div>
+            <!--text-->
+            <strong>Rose Flower</strong>
+        </a>
+        <!--box2-->
+        <a href="#" class="category-box">
+            <!--img-->
+            <div class="category-box-img">
+                <img src="images/ribbon.png" height="250" width="250" alt=" ribbon Rose">
+            </div>
+            <!--text-->
+            <strong>Satin Ribbon Rose</strong>
+        </a>
+        <!--box3-->
+        <a href="#" class="category-box">
+            <!--img-->
+            <div class="category-box-img">
+                <img src="images/sunflower.jpg"height="250" width="250" alt="sunflower ">
+            </div>
+            <!--text-->
+            <strong>Sun Flower</strong>
+        </a>
+        <!--box4-->
+        <a href="#" class="category-box">
+            <!--img-->
+            <div class="category-box-img">
+                <img src="images/annual.jpg"height="250" width="250" alt="Annual flower">
+            </div>
+            <!--text-->
+            <strong>Annual Flower</strong>
+        </a>
+        <!--box5-->
+        <a href="#" class="category-box">
+            <!--img-->
+            <div class="category-box-img">
+                <img src="images/tulip.jpg" height="250" width="250" alt="tulip flower">
+            </div>
+            <!--text-->
+            <strong>Tulip Flower</strong>
+        </a>
+        <!--box6-->
+        <a href="#" class="category-box">
+            <!--img-->
+            <div class="category-box-img">
+                <img src="images/marigold.jpg" height="250" width="250" alt="marigold">
+            </div>
+            <!--text-->
+            <strong>Marigold</strong>
+        </a>
+        
+
+    </section>
+
+    <!--popular====================================-->
+    <section id="popular">
+        <!--heading==========================-->
+        <h2>POPULAR FLOWER</h2>
+
+        <!--**container**********************-->
+        <div class="popular-dress-container">
+            <!--==product-container===================-->
+            <div class="popular-product-container">
+
+                <!--box1-->
+                <div class="product-box">
+                    <!--img-->
+                    <a href="#" class="product-box-img">
+                        <img src="images/1ribbon.jpg"   alt="product"/>
+                        <span>(New)</span>
+                    </a>
+                    <!--text-->
+                    <div class="product-box-text">
+                        <a href="#" class="product-text-title">Red Ribbon Bouquet</a>
+                        <span>₹1799 <del>₹1999</del></span>
+                        <a href="#" class="product-cart-btn" data-name="Red Ribbon Bouquet" data-price="1799" data-image="images/1ribbon.jpg">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+
+                            Add To Cart
+                        </a>
+
+                    </div>
+                </div>
+
+             <!--box2-->
+             <div class="product-box">
+                <!--img-->
+                <a href="#" class="product-box-img">
+                    <img src="images/2birthday.jpg"  alt="product"/>
+                    <span>(New)</span>
+                </a>
+                <!--text-->
+                <div class="product-box-text">
+                    <a href="#" class="product-text-title">Birthday Bouquet</a>
+                    <span>₹2500 <del>₹2999</del></span>
+                    <a href="#" class="product-cart-btn" data-name="Birthday Bouquet" data-price="2500" data-image="images/2birthday.jpg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+
+                        Add To Cart
+                    </a>
+
+                </div>
+            </div>
+             <!--box3-->
+             <div class="product-box">
+                <!--img-->
+                <a href="#" class="product-box-img">
+                    <img src="images/3flowerpot.jpg"     alt="product"/>
+                    <span>(New)</span>
+                </a>
+                <!--text-->
+                <div class="product-box-text">
+                    <a href="#" class="product-text-title">Flowe Pot</a>
+                    <span>₹1299 <del>₹1499</del></span>
+                    <a href="#" class="product-cart-btn"data-name="Flowe Pot" data-price="1299" data-image="images/3flowerpot.jpg" >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+
+                        Add To Cart
+                    </a>
+
+                </div>
+            </div>
+            <!--box4-->
+            <div class="product-box">
+                <!--img-->
+                <a href="#" class="product-box-img">
+                    <img src="images/4photob.jpg"    alt="product"/>
+                    <span>(New)</span>
+                </a>
+                <!--text-->
+                <div class="product-box-text">
+                    <a href="#" class="product-text-title">Picture Bouquet</a>
+                    <span>₹1400 <del>₹1699</del></span>
+                    <a href="#" class="product-cart-btn" data-name="Picture Bouquet" data-price="1400" data-image="images/4photob.jpg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                        Add To Cart
+                    </a>
+
+                </div>
+            </div>
+            <!--box5-->
+            <div class="product-box">
+                <!--img-->
+                <a href="#" class="product-box-img">
+                    <img src="images/5 Money.jpg"     alt="product"/>
+                    <span>(New)</span>
+                </a>
+                <!--text-->
+                <div class="product-box-text">
+                    <a href="#" class="product-text-title">Money Bouquet</a>
+                    <span>₹1599 <del>₹1799</del></span>
+                    <a href="#" class="product-cart-btn"data-name="Money Bouquet" data-price="1599" data-image="images/5 Money.jpg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                        Add To Cart
+                    </a>
+
+                </div>
+            </div>
+            <!--box6-->
+            <div class="product-box">
+                <!--img-->
+                <a href="#" class="product-box-img">
+                    <img src="images/6gift.jpg"   alt="product"/>
+                    <span>(New)</span>
+                </a>
+                <!--text-->
+                <div class="product-box-text">
+                    <a href="#" class="product-text-title">Gift chocolate box</a>
+                    <span>₹1899 <del>₹1999</del></span>
+                    <a href="#" class="product-cart-btn"data-name="Gift chocolate box" data-price="1899" data-image="images/6gift.jpg">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                        Add To Cart
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <!--==banner==============================-->
+        <div class="popular-banner">
+            <!--text-->
+            <div class="popular-banner-text">
+                <h3>summer flower collection</h3>
+                <a href="#">Shop Now</a>
+            </div>
+            <br>
+            <!--img-->
+            <div class="popular-banner-img">
+                <img src="Images/side.jpg" width="500" height="900" alt="banner"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--shopping-banner===========================-->
+<section id="shopping-banner">
+    <div class="shopping-anner-container">
+        <!--text-->
+        <div class="shopping-banner-text">
+            <strong>GIFT HAMPER</strong>
+            <h3>HAMPER AND BOUQUET COMBO</h3>
+            <p>exotic offer are here BUY gift hamper and flower bouquet at minimum price </p>
+            <a href="#">Shop Now</a>
+        </div>
+        <!--img-->
+        <div class="shopping-banner-img">
+            <img src="images/combo.jpg" height="600" width="900" alt="hamper"> 
+
+        </div>
+    </div>
+</section>
+
+<!--==recent-add=======================-->
+<section id="recent-products">
+    <!--*heading**************************-->
+    <h2>Recent Flower</h2>
+
+    <!---*container**********************-->
+    <div class="recent-items-container">
+        <!--box1-->
+        <div class="items-box">
+            <!--img-->
+            <a href="#" class="items-box-img">
+                <img src="images/r1hanp.jpg" height="250" width="250" alt="product"/>
+                <span>(New)</span>
+            </a>
+            <!--text-->
+            <div class="items-box-text">
+                <a href="#" class="items-text-title">New Chocolate Hamper</a>
+                <span>₹1899 <del>₹1999</del></span>
+                <a href="#" class="items-cart-btn" data-name="New Chocolate Hamper" data-price="1899" data-image="images/r1hanp.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15">
+                        <path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                    Add To Cart
+                </a>
+            </div>
+        </div>
+        <!--box2-->
+        <div class="items-box">
+            <!--img-->
+            <a href="#" class="items-box-img">
+                <img src="images/r2cat.jpg"  height="250" width="250"  alt="product"/>
+                <span>(New)</span>
+            </a>
+            <!--text-->
+            <div class="items-box-text">
+                <a href="#" class="items-text-title">Stuff Toy Bouquet</a>
+                <span>₹ 899 <del>₹999</del></span>
+                <a href="#" class="items-cart-btn" data-name="Stuff Toy Bouquet" data-price="899" data-image="images/r2cat.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                    Add To Cart
+                </a>
+            </div>
+        </div>
+        <!--box3-->
+        <div class="items-box">
+            <!--img-->
+            <a href="#" class="items-box-img">
+                <img src="images/r3small.jpg"  height="100" width="250"  alt="product"/>
+                <span>(New)</span>
+            </a>
+            <!--text-->
+            <div class="items-box-text">
+                <a href="#" class="items-text-title">Small Bouquet</a>
+                <span>₹500 <del>₹599</del></span>
+                <a href="#" class="items-cart-btn"  data-name="Small Bouquet" data-price="₹500 " data-image="images/r3small.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                    Add To Cart
+                </a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+<!--==PLANTS COLLLECTION========================================================-->
+<section id="recent-products">
+    <!--*heading**************************-->
+    <h2>Plants collection</h2>
+
+    <!---*container**********************-->
+    <div class="recent-items-container">
+        <!--box1-->
+        <div class="items-box">
+            <!--img-->
+            <a href="#" class="items-box-img">
+                <img src="images/p1bonsai.jpg" height="250" width="250" alt="product"/>
+                <span>(fresh arrival)</span>
+            </a>
+            <!--text-->
+            <div class="items-box-text">
+                <a href="#" class="items-text-title">Japanese Bonsai</a>
+                <span>₹1500 <del>₹3000</del></span>
+                <a href="#" class="items-cart-btn" data-name="Japanese Bonsai" data-price="1500" data-image="images/p1bonsai.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+
+                    Add To Cart
+                </a>
+
+            </div>
+        </div>
+        <!--box2-->
+        <div class="items-box">
+            <!--img-->
+            <a href="#" class="items-box-img">
+                <img src="images/p2snake.jpg"  height="250" width="250"  alt="product"/>
+                <span>(fresh arrival)</span>
+            </a>
+            <!--text-->
+            <div class="items-box-text">
+                <a href="#" class="items-text-title">Snake Plant</a>
+                <span>₹999 <del>₹1199</del></span>
+                <a href="#" class="items-cart-btn" data-name="Snake Plant" data-price="999" data-image="images/p2snake.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15">
+                        <path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/>
+                    </svg>
+                    Add To Cart
+                </a>
+            </div>
+        </div>
+         <!--box3-->
+         <div class="items-box">
+            <!--img-->
+            <a href="#" class="items-box-img">
+                <img src="images/p3spider.jpg"  height="100" width="250"  alt="product"/>
+                <span>(new arrival)</span>
+            </a>
+            <!--text-->
+            <div class="items-box-text">
+                <a href="#" class="items-text-title">Spider Plant</a>
+                <span>₹799 <del>₹999</del></span>
+                <a href="#" class="items-cart-btn"data-name="Spider Plant" data-price="799" data-image="images/p3spider.jpg">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="15" width="15"><path d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64l0 48-128 0 0-48zm-48 48l-64 0c-26.5 0-48 21.5-48 48L0 416c0 53 43 96 96 96l256 0c53 0 96-43 96-96l0-208c0-26.5-21.5-48-48-48l-64 0 0-48C336 50.1 285.9 0 224 0S112 50.1 112 112l0 48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/></svg>
+                    Add To Cart
+                </a>
+
+            </div>
+        </div>
+          
+    </div>
+</section>
+
+
+<!--servicesss============================================-->
+
+<section class="services"> 
+    <!--service-box1-->
+    <div class="service-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" height="30" width="30"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M48 0C21.5 0 0 21.5 0 48L0 368c0 26.5 21.5 48 48 48l16 0c0 53 43 96 96 96s96-43 96-96l128 0c0 53 43 96 96 96s96-43 96-96l32 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l0-64 0-32 0-18.7c0-17-6.7-33.3-18.7-45.3L512 114.7c-12-12-28.3-18.7-45.3-18.7L416 96l0-48c0-26.5-21.5-48-48-48L48 0zM416 160l50.7 0L544 237.3l0 18.7-128 0 0-96zM112 416a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm368-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+        <span>Free shipping</span>
+        <p>Free shipping for all orders</p>
+    </div>
+    <!--service-box2-->
+    <div class="service-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="30" width="30"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M256 80C141.1 80 48 173.1 48 288l0 104c0 13.3-10.7 24-24 24s-24-10.7-24-24L0 288C0 146.6 114.6 32 256 32s256 114.6 256 256l0 104c0 13.3-10.7 24-24 24s-24-10.7-24-24l0-104c0-114.9-93.1-208-208-208zM80 352c0-35.3 28.7-64 64-64l16 0c17.7 0 32 14.3 32 32l0 128c0 17.7-14.3 32-32 32l-16 0c-35.3 0-64-28.7-64-64l0-64zm288-64c35.3 0 64 28.7 64 64l0 64c0 35.3-28.7 64-64 64l-16 0c-17.7 0-32-14.3-32-32l0-128c0-17.7 14.3-32 32-32l16 0z"/></svg>
+
+        <span>Support 12hrs</span>
+        <p>we support 12 hours a day</p>
+    </div>
+    <!--service-box3-->
+    <div class="service-box">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="30" width="30"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M32 96l320 0 0-64c0-12.9 7.8-24.6 19.8-29.6s25.7-2.2 34.9 6.9l96 96c6 6 9.4 14.1 9.4 22.6s-3.4 16.6-9.4 22.6l-96 96c-9.2 9.2-22.9 11.9-34.9 6.9s-19.8-16.6-19.8-29.6l0-64L32 160c-17.7 0-32-14.3-32-32s14.3-32 32-32zM480 352c17.7 0 32 14.3 32 32s-14.3 32-32 32l-320 0 0 64c0 12.9-7.8 24.6-19.8 29.6s-25.7 2.2-34.9-6.9l-96-96c-6-6-9.4-14.1-9.4-22.6s3.4-16.6 9.4-22.6l96-96c9.2-9.2 22.9-11.9 34.9-6.9s19.8 16.6 19.8 29.6l0 64 320 0z"/></svg>
+
+        <span>100% cashback policy</span>
+        <p>shuold return within 3 days </p>
+    </div>
+</section>
+
+
+
+<!--review section starts-->
+<section class="review" id="review">
+    <h1 class="heading">customer's <span>review</span></h1>
+    <div class="box-container">
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>"Absolutely stunning arrangements! I ordered a bouquet for my mom's birthday and it was even more beautiful than the pictures. Fresh, fragrant, and delivered right on time. Highly recommend this flower shop!"</p>
+            <div class="user">
+                <img src="images/pic-1.png" alt="">
+                <div class="user-info">
+                    <h3>Priya R.</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>"From roses to lilies, every flower looked handpicked with love. The staff was super friendly and helped me choose the perfect bouquet for my anniversary. My wife couldn’t stop smiling!"</p>
+            <div class="user">
+                <img src="images/pic-2.png" alt="">
+                <div class="user-info">
+                    <h3>Arjun M</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>"The attention to detail is amazing. I’ve never seen such creative floral designs before. The packaging, freshness, and colors were top-notch. This is my go-to place for flowers now!"  </p>
+            <div class="user">
+                <img src="images/pic-3.png" alt="">
+                <div class="user-info">
+                    <h3>Sneha K.</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+
+        <div class="box">
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+            </div>
+            <p>"What a charming little shop! The owner clearly cares about quality and customer service. I placed a last-minute order and they still delivered a gorgeous arrangement. 5 stars!"</p>
+            <div class="user">
+                <img src="images/pic-4.jpg" alt="">
+                <div class="user-info">
+                    <h3>Rahul S.</h3>
+                    <span>Happy Customers</span>
+                </div>
+            </div>
+            <span class="fas fa-quote-right"></span>
+        </div>
+    </div>
+</section>
+
+<!--review section ends-->
+
+
+<!--footer===============================================-->
+<footer>
+    <div class="footer-container">
+        <!--company-box=============-->
+        <div class="footer-company-box">
+            <!--logo-->
+            <a href="#" class="footer-logo">
+                <img src="images/ailogo.png" width="300" height="120" alt="logo"/>
+            </a>
+            <!--details-->
+            <p>Online bouquet and flower shop website /we are Delhi based </p>
+            <!--social-->
+            <div class="footer-social">
+                <!--facebook-->
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"height="60" weight="60"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M512 256C512 114.6 397.4 0 256 0S0 114.6 0 256C0 376 82.7 476.8 194.2 504.5V334.2H141.4V256h52.8V222.3c0-87.1 39.4-127.5 125-127.5c16.2 0 44.2 3.2 55.7 6.4V172c-6-.6-16.5-1-29.6-1c-42 0-58.2 15.9-58.2 57.2V256h83.6l-14.4 78.2H287V510.1C413.8 494.8 512 386.9 512 256h0z"/></svg>
+
+                </a>
+                <!--instagram-->
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="60" weight="60"
+                    >  <path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+
+                </a>
+                <!--twittter-->
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" height="60" weight="60"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5 .3 9.1 .3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53 51.7 63.7 129.3 105.3 216.4 109.8-1.6-7.8-2.6-15.9-2.6-24 0-57.8 46.8-104.9 104.9-104.9 30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3z"/></svg>
+
+                </a>
+                <!--youtube-->
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" height="60" weight="60"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.3-23.7-24.8-42.3-48.3-48.6C458.8 64 288 64 288 64S117.2 64 74.6 75.5c-23.5 6.3-42 24.9-48.3 48.6-11.4 42.9-11.4 132.3-11.4 132.3s0 89.4 11.4 132.3c6.3 23.7 24.8 41.5 48.3 47.8C117.2 448 288 448 288 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zm-317.5 213.5V175.2l142.7 81.2-142.7 81.2z"/></svg>
+
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    <!-- Footer -->
+<footer style="text-align: center; padding: 15px 0; background-color: #333; color: #fff; font-size: 14px; margin-top: 40px;">
+    &copy; 2025 @Payel Das | All Rights Reserved
+</footer>
+
+    
+    <!--==script=========================================-->
+    <script>
+
+        document.addEventListener('DOMContent', function(){
+
+            // For Search=========================//
+            document.addEventListener('click',function(event){
+                if(event.target.closest('.nav-search')){
+                    document.querySelector('.search-bar').classList.add('search-bar-active');
+                }
+                else if(event.target.closest('.search-cancel')){
+                    document.querySelector('.search-bar').classList.remove('search-bar-active');
+                }
+            });
+
+            //for login signup=======================//
+            document.addEventListener('click', function(event){
+                //checking if clicked element has the class 'nav-user or 'already-account'
+                if(event.target.closest('.nav-user', '.already-account')){
+                    const forElement = document.querySelector('.form');
+                    forElement.classList.add('login-active');
+                    forElement.classlist.remove('sign-up-active');
+                }
+                 //checking if clicked element has the class 'sign-up-btn'
+                if(event.target.closest('.sign-up-btn')){
+                    const forElement = document.querySelector('.form');
+                    forElement.classList.remove('login-active');
+                    forElement.classlist.add('sign-up-active');
+                }
+                //checking if clicked element has the class 'sign-up-btn'
+                if(event.target.closest('.sign-up-btn')){
+                    const forElement = document.querySelector('.form');
+                    forElement.classList.remove('login-active');
+                    forElement.classlist.add('sign-up-active');
+                }
+                //checking if clicked element has the class 'sign-up-btn'
+                if(event.target.closest('.sign-up-btn')){
+                    const forElement = document.querySelector('.form');
+                    forElement.classList.remove('login-active');
+                    forElement.classlist.add('sign-up-active');
+                }
+                //checking if clicked element has the class 'sign-up-btn'
+                if(event.target.closest('.sign-up-btn')){
+                    const forElement = document.querySelector('.form');
+                    forElement.classList.remove('login-active');
+                    forElement.classlist.add('sign-up-active');
+                }
+                 //checking if clicked element has the class 'form-cancel'
+                if(event.target.closest('.form-cancel')){
+                    const forElement = document.querySelector('.form');
+                    forElement.classList.remove('login-active');
+                    forElement.classlist.remove('sign-up-active');
+                }
+    
+            });
+        });
+
+        // ADD to cart code
+// Initialize cart as an empty array or retrieve from local storage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Function to add product to the cart
+function addToCart(event) {
+    event.preventDefault();
+    
+    const productName = event.target.getAttribute('data-name');
+    const productPrice = parseFloat(event.target.getAttribute('data-price'));
+    const productImage = event.target.getAttribute('data-image');
+    const button = event.target; // Reference to the button that was clicked
+
+    // Check if the product already exists in the cart
+    const existingProductIndex = cart.findIndex(item => item.name === productName);
+    if (existingProductIndex > -1) {
+        button.innerText = "Added"; // Change button text
+        button.disabled = true; // Disable the button
+        return; // Exit the function
+    }
+
+    // Add product to cart
+    cart.push({
+        name: productName,
+        price: productPrice,
+        image: productImage
+    });
+
+    // Save cart to local storage
+    localStorage.setItem("cart", JSON.stringify(cart)); 
+    console.log(cart); // Check the cart content
+
+    // Update button text and disable it
+    button.innerText = "Added"; // Change button text
+    button.disabled = true; // Disable the button
+}
+
+// Attach event listeners to all "Add to Cart" buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Select both product-cart-btn and items-cart-btn
+    document.querySelectorAll('.product-cart-btn, .items-cart-btn').forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+});
+
+</script>
+
+</body>
+</html>

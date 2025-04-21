@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Track Order</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    .track-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    .track-container h2 {
+      color: #444;
+    }
+    .track-info {
+      margin-top: 20px;
+    }
+    .track-info p {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .status {
+      font-weight: bold;
+      color: green;
+    }
+    .date {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="track-container">
+    <h2>Track Your Order</h2>
+    <form onsubmit="event.preventDefault(); showTracking();">
+      <label for="orderId">Enter Order ID:</label><br>
+      <input type="text" id="orderId" placeholder="e.g., FL12345" required>
+      <br><br>
+      <button type="submit">Track Order</button>
+    </form>
+
+    <div id="trackResult" class="track-info" style="display:none;">
+      <p>🚚 <span class="status">Out for Delivery</span></p>
+      <p>📍 Current Location: <strong>Delhi</strong></p>
+      <p>📅 Estimated Delivery: <span class="date">April 23, 2025</span></p>
+    </div>
+  </div>
+
+  <script>
+    function showTracking() {
+      const trackResult = document.getElementById("trackResult");
+      trackResult.style.display = "block";
+    }
+  </script>
+</body>
+</html>
