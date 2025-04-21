@@ -3,69 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIVO Phones</title>
-    <link rel="stylesheet" href="css/old ph.css">
+    <title>Bloompop Flower Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff6f61;
+            color: white;
+        }
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .product-box {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 30%;
+            margin: 1.5%;
+            text-align: center;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .product-box img {
+            width: 100%;
+            height: auto;
+        }
+        .product-box-text {
+            margin-top: 10px;
+        }
+        .product-cart-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .product-cart-btn:hover {
+            background-color: #e65c50;
+        }
+    </style>
 </head>
 <body>
 
+<header>
+    <h1>Welcome to Bloompop Flower Shop</h1>
+    <p>Explore our beautiful collection of flowers and plants!</p>
+</header>
 
-    <section class="categories -search">
-        <div class="search-container">
-        <form action="search.html" method="GET" class="search-form">
-            <input type="text" name="query" placeholder="Search..." required>
-            <button type="submit">Search</button>
-        </form>
-        <span class="address">123 Street, City, Country</span>
-        <a href="cart.html">🛒</a>
-        <a href="user.html">👤</a>
-    </div>
-<!-- This is where the search results will be displayed -->
-<div id="searchResults"></div>
-</section>
-
-<main>
-    <section id="vivo" class="phone-category">
-        <div class="product-list">
-            <div class="product-card">
-                <img src="../assets/vivo-old-phone.jpg" alt="Vivo new Phone">
-                <div>
-                    <h2>Vivo Y71</h2>
-                    <p class="rating">⭐⭐⭐⭐ 4.2 (1,200 Reviews)</p>
-                    <p>Price: ₹7699</p>
-                    <button class="add-to-cart" data-name="Vivo Y71" data-price="7699" data-image="../assets/vivo-old-phone.jpg">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="../assets/oppo-reno-12.jpg "alt="OPPO Reno12 5G">
-                <div>
-                    <h2>Vivo Y71</h2>
-                    <p class="rating">⭐⭐⭐⭐ 4.2 (1,200 Reviews)</p>
-                    <p>Price: ₹6,299</p>
-                    <button class="add-to-cart" data-name="Realme C1" data-price="4999" data-image="">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="../assets/vivo-v40-pro.jpg" alt="Vivo new Phone">
-                <div>
-                    <h2>Vivo Y40 PRO </h2>
-                    <p>Price: ₹9299</p>
-                    <p class="rating">⭐⭐⭐⭐ 4.2 (1,200 Reviews)</p>
-                    <button class="add-to-cart" data-name="Vivo Y40 PRO" data-price="9299" data-image="./assets/vivo-v40-pro.jpg">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-card">
-                <img src="../assets/Vivo Y200e 5G.jpg" alt="Vivo new Phone">
-                <div>
-                    <h2>Vivo Y200e 5G</h2>
-                    <p class="rating">⭐⭐⭐⭐ 4.2 (1,200 Reviews)</p>
-                    <p>Price: ₹8299</p>
-                    <button class="add-to-cart" data-name="Vivo Y200e 5G" data-price="8299" data-image="../assets/Vivo Y200e 5G.jpg">Add to Cart</button>
-                </div>
-            </div>
+<div class="product-container">
+    <!-- Product 1 -->
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/1ribbon.jpg" alt="Red Ribbon Bouquet"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Red Ribbon Bouquet</a>
+            <span>₹1799 <del>₹1999</del></span>
+            <a href="#" class="product-cart-btn" data-name="Red Ribbon Bouquet" data-price="1799" data-image="images/1ribbon.jpg">Add To Cart</a>
         </div>
-    </section>
-</main>
+    </div>
 
-<script src="../public/css/js/cart.js" defer></script>
+    <!-- Product 2 -->
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/2birthday.jpg" alt="Birthday Bouquet"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Birthday Bouquet</a>
+            <span>₹2500 <del>₹2999</del></span>
+            <a href="#" class="product-cart-btn" data-name="Birthday Bouquet" data-price="2500" data-image="images/2birthday.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/3flowerpot.jpg" alt="Flower Pot"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Flower Pot</a>
+            <span>₹1299 <del>₹1499</del></span>
+            <a href="#" class="product-cart-btn" data-name="Flower Pot" data-price="1299" data-image="images/3flowerpot.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/4photob.jpg" alt="Picture Bouquet"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Picture Bouquet</a>
+            <span>₹1400 <del>₹1699</del></span>
+            <a href="#" class="product-cart-btn" data-name="Picture Bouquet" data-price="1400" data-image="images/4photob.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <!-- Product 5 -->
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/5 Money.jpg" alt="Money Bouquet"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Money Bouquet</a>
+            <span>₹1599 <del>₹1799</del></span>
+            <a href="#" class="product-cart-btn" data-name="Money Bouquet" data-price="1599" data-image="images/5 Money.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <!-- Product 6 -->
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/6gift.jpg" alt="Gift Chocolate Box"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Gift Chocolate Box</a>
+            <span>₹1899 <del>₹1999</del></span>
+            <a href="#" class="product-cart-btn" data-name="Gift Chocolate Box" data-price="1899" data-image="images/6gift.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <!-- Additional Products -->
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/r1hanp.jpg" alt="New Chocolate Hamper"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">New Chocolate Hamper</a>
+            <span>₹1899 <del>₹1999</del></span>
+            <a href="#" class="product-cart-btn" data-name="New Chocolate Hamper" data-price="1899" data-image="images/r1hanp.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/r2cat.jpg" alt="Stuff Toy Bouquet"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Stuff Toy Bouquet</a>
+            <span>₹899 <del>₹999</del></span>
+            <a href="#" class="product-cart-btn" data-name="Stuff Toy Bouquet" data-price="899" data-image="images/r2cat.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/r3small.jpg" alt="Small Bouquet"/>
+            <span>(New)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Small Bouquet</a>
+            <span>₹500 <del>₹599</del></span>
+            <a href="#" class="product-cart-btn" data-name="Small Bouquet" data-price="500" data-image="images/r3small.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/p1bonsai.jpg" alt="Japanese Bonsai"/>
+            <span>(Fresh Arrival)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Japanese Bonsai</a>
+            <span>₹1500 <del>₹3000</del></span>
+            <a href="#" class="product-cart-btn" data-name="Japanese Bonsai" data-price="1500" data-image="images/p1bonsai.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/p2snake.jpg" alt="Snake Plant"/>
+            <span>(Fresh Arrival)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Snake Plant</a>
+            <span>₹999 <del>₹1199</del></span>
+            <a href="#" class="product-cart-btn" data-name="Snake Plant" data-price="999" data-image="images/p2snake.jpg">Add To Cart</a>
+        </div>
+    </div>
+
+    <div class="product-box">
+        <a href="#" class="product-box-img">
+            <img src="images/p3spider.jpg" alt="Spider Plant"/>
+            <span>(New Arrival)</span>
+        </a>
+        <div class="product-box-text">
+            <a href="#" class="product-text-title">Spider Plant</a>
+            <span>₹799 <del>₹999</del></span>
+            <a href="#" class="product-cart-btn" data-name="Spider Plant" data-price="799" data-image="images/p3spider.jpg">Add To Cart</a>
+        </div>
+    </div>
+</div>
+
+<footer style="text-align: center; margin-top: 20px;">
+    <p>&copy; 2023 Bloompop. All rights reserved.</p>
+</footer>
+
+
+
+<script>
+  
+        // ADD to cart code
+// Initialize cart as an empty array or retrieve from local storage
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+// Function to add product to the cart
+function addToCart(event) {
+    event.preventDefault();
+    
+    const productName = event.target.getAttribute('data-name');
+    const productPrice = parseFloat(event.target.getAttribute('data-price'));
+    const productImage = event.target.getAttribute('data-image');
+    const button = event.target; // Reference to the button that was clicked
+
+    // Check if the product already exists in the cart
+    const existingProductIndex = cart.findIndex(item => item.name === productName);
+    if (existingProductIndex > -1) {
+        button.innerText = "Added"; // Change button text
+        button.disabled = true; // Disable the button
+        return; // Exit the function
+    }
+
+    // Add product to cart
+    cart.push({
+        name: productName,
+        price: productPrice,
+        image: productImage
+    });
+
+    // Save cart to local storage
+    localStorage.setItem("cart", JSON.stringify(cart)); 
+    console.log(cart); // Check the cart content
+
+    // Update button text and disable it
+    button.innerText = "Added"; // Change button text
+    button.disabled = true; // Disable the button
+}
+
+// Attach event listeners to all "Add to Cart" buttons
+document.addEventListener('DOMContentLoaded', function() {
+    // Select both product-cart-btn and items-cart-btn
+    document.querySelectorAll('.product-cart-btn, .items-cart-btn').forEach(button => {
+        button.addEventListener('click', addToCart);
+    });
+});
+
+</script>
+
 </body>
 </html>

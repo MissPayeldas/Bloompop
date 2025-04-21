@@ -1,15 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ecommerce Website - Add to Cart Shopping using HTML CSS and JavaScript | Codehal</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Bloompop Flower Search</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff6f61;
+            color: white;
+        }
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .search-container button {
+            padding: 10px 15px;
+            background-color: #ff6f61;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-container button:hover {
+            background-color: #e65c50;
+        }
+        .results {
+            margin-top: 20px;
+        }
+        .product-box {
+            display: inline-block;
+            width: 30%;
+            margin: 1.5%;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px;
+        }
+        .product-box img {
+            width: 100%;
+            height: auto;
+        }
+        .product-box-text {
+            margin-top: 10px;
+        }
+        .product-cart-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .product-cart-btn:hover {
+            background-color: #e65c50;
+        }
+    </style>
 </head>
-
 <body>
-    
-</body>
 
+<header>
+    <h1>Bloompop Flower Search</h1>
+    <p>Find the perfect flowers and arrangements for any occasion!</p>
+</header>
+
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for flowers, arrangements, or subscriptions...">
+    <button onclick="performSearch()">Search</button>
+</div>
+
+<div class="results" id="resultsContainer">
+    <!-- Search results will be displayed here -->
+</div>
+
+<script>
+    const products = [
+        {
+            name: "Red Ribbon Bouquet",
+            price: 1799,
+            image: "images/1ribbon.jpg",
+            description: "Beautiful red roses for any occasion."
+        },
+        {
+            name: "Birthday Bouquet",
+            price: 2500,
+            image: "images/2birthday.jpg",
+            description: "Colorful tulips to brighten your day."
+        },
+        {
+            name: "Flower Pot",
+            price: 1299,
+            image: "images/3flowerpot.jpg",
+            description: "Elegant flower pot for your home."
+        },
+        {
+            name: "Picture Bouquet",
+            price: 1400,
+            image: "images/4photob.jpg",
+            description: "A beautiful bouquet for any picture-perfect moment."
+        },
+        {
+            name: "Money Bouquet",
+            price: 1599,
+            image: "images/5 Money.jpg",
+            description: "A unique bouquet that symbolizes prosperity."
+        },
+        {
+            name: "Gift Chocolate Box",
+            price: 1899,
+            image: "images/6gift.jpg",
+            description: "A delightful chocolate box to accompany your flowers."
+        },
+        {
+            name: "New Chocolate Hamper",
+            price: 1899,
+            image: "images/r1hanp.jpg",
+            description: "A sweet treat for any occasion."
+        },
+        {
+            name: "Stuff Toy Bouquet",
+            price: 899,
+            image: "images/r2cat.jpg",
+            description: "A fun bouquet with stuffed toys."
+        },
+        {
+            name: "Small Bouquet",
+            price: 500,
+            image: "images/r3small.jpg",
+            description: "A small yet beautiful bouquet."
+        },
+        {
+            name: "Japanese Bonsai",
+            price: 1500,
+            image: "images/p1bonsai.jpg",
+            description: "A beautiful Japanese bonsai for your home."
+        },
+        {
+            name: "Snake Plant",
+            price: 999,
+            image: "images/p2snake.jpg",
+            description: "A hardy plant that purifies the air."
+        },
+        {
+            name: "Spider Plant",
+            price: 799,
+            image: "images/p3spider.jpg",
+            description: "An easy-to-care-for plant that thrives indoors."
+        }
+    ];
+
+    function performSearch() {
+        const query = document.getElementById('searchInput').value.toLowerCase();
+        const resultsContainer = document.getElementById('resultsContainer');
+        resultsContainer.innerHTML = ''; // Clear previous results
+
+        const filteredResults = products.filter(product => 
+            product.name.toLowerCase().includes(query) || 
+            product.description.toLowerCase().includes(query)
+        );
+
+        if (filteredResults.length > 0) {
+            filteredResults.forEach(product => {
+                const productBox = document.createElement('div');
+                productBox.className = 'product-box';
+                productBox.innerHTML = `
+                    <a href="#" class="product-box-img">
+                        <img src="${product.image}" alt="${product.name}"/>
+                        <span>(New)</span>
+                    </a>
+                    <div class="product-box-text">
+                        <a href="#" class="product-text-title">${product.name}</a>
+                        <span>₹${product.price} <del>₹${(product.price + 200).toFixed(2)}</del></span>
+                        <a href="#" class="product-cart-btn" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">
+                            Add To Cart
+                        </a>
+                    </div>
+                `;
+                resultsContainer.appendChild(productBox);
+            });
+        } else {
+            resultsContainer.innerHTML = '<p>No results found.</p>';
+        }
+    }
+</script>
+
+</body>
 </html>
