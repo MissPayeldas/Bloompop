@@ -1,6 +1,4 @@
-
-
-
+<!----search.html--->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +17,7 @@
         header {
             text-align: center;
             padding: 20px;
-            background-color: #ff6f61;
+            background-color: #eeb1ab;
             color: white;
         }
         .search-container {
@@ -35,7 +33,7 @@
         }
         .search-container button {
             padding: 10px 15px;
-            background-color: #ff6f61;
+            background-color: #6171ff;
             border: none;
             color: white;
             border-radius: 5px;
@@ -76,6 +74,18 @@
         .product-cart-btn:hover {
             background-color: #e65c50;
         }
+        #cartContainer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        #notification {
+            margin-top: 10px;
+            color: green;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -94,80 +104,29 @@
     <!-- Search results will be displayed here -->
 </div>
 
+<div id="cartContainer">
+    <h2>Your Cart</h2>
+    <!-- Cart items will be displayed here -->
+</div>
+
+<div id="notification">
+    <!-- Notification message will be displayed here -->
+</div>
+
 <script>
     const products = [
-        {
-            name: "Red Ribbon Bouquet",
-            price: 1799,
-            image: "images/1ribbon.jpg",
-            description: "Beautiful red roses for any occasion."
-        },
-        {
-            name: "Birthday Bouquet",
-            price: 2500,
-            image: "images/2birthday.jpg",
-            description: "Colorful tulips to brighten your day."
-        },
-        {
-            name: "Flower Pot",
-            price: 1299,
-            image: "images/3flowerpot.jpg",
-            description: "Elegant flower pot for your home."
-        },
-        {
-            name: "Picture Bouquet",
-            price: 1400,
-            image: "images/4photob.jpg",
-            description: "A beautiful bouquet for any picture-perfect moment."
-        },
-        {
-            name: "Money Bouquet",
-            price: 1599,
-            image: "images/5 Money.jpg",
-            description: "A unique bouquet that symbolizes prosperity."
-        },
-        {
-            name: "Gift Chocolate Box",
-            price: 1899,
-            image: "images/6gift.jpg",
-            description: "A delightful chocolate box to accompany your flowers."
-        },
-        {
-            name: "New Chocolate Hamper",
-            price: 1899,
-            image: "images/r1hanp.jpg",
-            description: "A sweet treat for any occasion."
-        },
-        {
-            name: "Stuff Toy Bouquet",
-            price: 899,
-            image: "images/r2cat.jpg",
-            description: "A fun bouquet with stuffed toys."
-        },
-        {
-            name: "Small Bouquet",
-            price: 500,
-            image: "images/r3small.jpg",
-            description: "A small yet beautiful bouquet."
-        },
-        {
-            name: "Japanese Bonsai",
-            price: 1500,
-            image: "images/p1bonsai.jpg",
-            description: "A beautiful Japanese bonsai for your home."
-        },
-        {
-            name: "Snake Plant",
-            price: 999,
-            image: "images/p2snake.jpg",
-            description: "A hardy plant that purifies the air."
-        },
-        {
-            name: "Spider Plant",
-            price: 799,
-            image: "images/p3spider.jpg",
-            description: "An easy-to-care-for plant that thrives indoors."
-        }
+        { name: "Red Ribbon Bouquet", price: 1799, image: "images/1ribbon.jpg", description: "Beautiful red roses for any occasion." },
+        { name: "Birthday Bouquet", price: 2500, image: "images/2birthday.jpg", description: "Colorful tulips to brighten your day." },
+        { name: "Flower Pot", price: 1299, image: "images/3flowerpot.jpg", description: "Elegant flower pot for your home." },
+        { name: "Picture Bouquet", price: 1400, image: "images/4photob.jpg", description: "A beautiful bouquet for any picture-perfect moment." },
+        { name: "Money Bouquet", price: 1599, image: "images/5 Money.jpg", description: "A unique bouquet that symbolizes prosperity." },
+        { name: "Gift Chocolate Box", price: 1899, image: "images/6gift.jpg", description: "A delightful chocolate box to accompany your flowers." },
+        { name: "New Chocolate Hamper", price: 1899, image: "images/r1hanp.jpg", description: "A sweet treat for any occasion." },
+        { name: "Stuff Toy Bouquet", price: 899, image: "images/r2cat.jpg", description: "A fun bouquet with stuffed toys." },
+        { name: "Small Bouquet", price: 500, image: "images/r3small.jpg", description: "A small yet beautiful bouquet." },
+        { name: "Japanese Bonsai", price: 1500, image: "images/p1bonsai.jpg", description: "A beautiful Japanese bonsai for your home." },
+        { name: "Snake Plant", price: 999, image: "images/p2snake.jpg", description: "A hardy plant that purifies the air." },
+        { name: "Spider Plant", price: 799, image: "images/p3spider.jpg", description: "An easy-to-care-for plant that thrives indoors." }
     ];
 
     // Initialize cart as an empty array or retrieve from local storage
@@ -231,45 +190,43 @@
         // Save cart to local storage
         localStorage.setItem("cart", JSON.stringify(cart));
         console.log(cart); // Check the cart content
-        alert(`${productName} has been added to your cart!`); // Optional: Alert user
-    }
 
-
-
-    function addToCart(event) {
-        event.preventDefault();
-        const productName = event.target.getAttribute('data-name');
-        const productPrice = parseFloat(event.target.getAttribute('data-price'));
-        const productImage = event.target.getAttribute('data-image');
-    
-        // Check if the product already exists in the cart
-        const existingProductIndex = cart.findIndex(item => item.name === productName);
-        if (existingProductIndex > -1) {
-            // If it exists, increase the quantity
-            cart[existingProductIndex].quantity += 1;
-        } else {
-            // If it doesn't exist, add it to the cart
-            cart.push({
-                name: productName,
-                price: productPrice,
-                image: productImage,
-                quantity: 1
-            });
-        }
-    
-        // Save cart to local storage
-        localStorage.setItem("cart", JSON.stringify(cart));
-        console.log(cart); // Check the cart content
-    
-        // Update notification area
+        // Update the notification area
         const notification = document.getElementById('notification');
         notification.innerHTML = `${productName} has been added to your cart!`;
-        
+
         // Optionally, clear the notification after a few seconds
         setTimeout(() => {
             notification.innerHTML = '';
         }, 3000);
+
+        // Update the cart display
+        displayCart();
     }
+
+    // Function to display cart contents
+    function displayCart() {
+        const cartContainer = document.getElementById('cartContainer');
+        cartContainer.innerHTML = '<h2>Your Cart</h2>'; // Reset cart display
+
+        if (cart.length === 0) {
+            cartContainer.innerHTML += '<p>Your cart is empty.</p>';
+            return;
+        }
+
+        cart.forEach(item => {
+            const cartItem = document.createElement('div');
+            cartItem.className = 'cart-item';
+            cartItem.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" style="width: 50px; height: auto;">
+                <span>${item.name} - ₹${item.price} x ${item.quantity}</span>
+            `;
+            cartContainer.appendChild(cartItem);
+        });
+    }
+
+    // Initial display of cart contents when the page loads
+    displayCart();
 </script>
 
 </body>
